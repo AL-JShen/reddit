@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+.App {
+  text-align: center;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0px;
+  box-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.currentSub {
+  margin-left: 20%;
+}
+
+.changeSub {
+  margin-right: 20%;
+}
+
+.title {
+  height: 125px;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10%
+}
+
+.title img {
+  height: 125px;
+  width: 375px
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  margin-right: -125px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.post {
+  border: 1px solid black;
+  width: 60%;
+  margin: 25px;
+}
+
+.cardHead, .cardBody, .cardFoot {
+  width: 100%;
+}
+
+#postMedia img, #postMedia video {
+  width: 100%;
+}
