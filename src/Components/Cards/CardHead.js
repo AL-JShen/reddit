@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import timeAgo from 'epoch-timeago';
+import { timeAgo } from '../Time';
 
 class CardHead extends Component {
 
@@ -18,13 +18,12 @@ class CardHead extends Component {
                       
             <div id="postSubmissionInfo">
               Submitted&nbsp; 
-              <span id="postTime">{timeAgo(post.created_utc * 1000)}</span>
+              <span id="postTime">{timeAgo(post.created_utc)}</span>
               &nbsp;by&nbsp;
               <span id="postAuthor"><a href={`https://www.reddit.com/user/${post.author}`}>u/{post.author}</a></span>
               &nbsp;to&nbsp;
               <span id="postSubreddit"><a href={`https://www.reddit.com/r/${post.subreddit}`}>r/{post.subreddit}</a> </span>
             </div>
-            <div id="postTime"></div>
           </div>
           
         </div>
