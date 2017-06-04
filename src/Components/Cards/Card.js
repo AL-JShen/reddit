@@ -10,7 +10,6 @@ class Card extends Component {
       <div className="card">
         <CardHead post={this.props.post}/>
         <CardBody showMedia={this.props.showMedia}/>
-        <CardFoot post={this.props.post}/>
       </div>
     );
   }

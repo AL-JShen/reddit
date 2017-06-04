@@ -5,6 +5,8 @@
   width: 100%;
   overflow-x: hidden;
   font-family: 'Noto Sans', sans-serif;
+  background-color: whitesmoke;
+  color: #3f3f3f;
 }
 
 .header {
@@ -64,15 +66,46 @@
 }
 
 .post {
-  border: 1px solid black;
-  width: 60%;
-  margin: 25px;
+  width: 750px;
+  margin: 40px;
 }
 
-.cardHead, .cardBody, .cardFoot {
+.topTop {
+  display: flex;
+  justify-content: center;
+}
+
+.topTop div {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.topBottom {
+  
+}
+
+.cardHead, .cardBody {
   width: 100%;
+}
+
+.App a {
+  text-decoration: none;
+  color: black;
+}
+
+.App a:hover {
+  text-decoration: underline;
 }
 
 #postMedia img, #postMedia video {
   width: 100%;
+}
+
+.wrapper {
+  width: 100% !important;
+}
+
+.wrapper iframe {
+  height: 400px !important;
+  border: 0;
 }

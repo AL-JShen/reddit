@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import timeAgo from 'epoch-timeago';
 
 class CardHead extends Component {
 
@@ -7,13 +8,32 @@ class CardHead extends Component {
     return (
       <div className="cardHead">
         
-        <div className="headRight">
-          <div id="postScore">{post.score}</div>
-          <div id="postSubmissionInfo"><span id="postAuthor"><a href={`https://www.reddit.com/user/${post.author}`}>u/{post.author}</a></span> to <span id="postSubreddit"><a href={`https://www.reddit.com/r/${post.subreddit}`}>r/{post.subreddit}</a></span></div>
+        <div className="headTop">
+          <div className="topTop">
+            <div id="postScore">{post.score} Points</div>
+            <div id="postComments"><a href={`https://www.reddit.com${post.permalink}`} target="_blank" rel="noopener noreferrer">Comments</a></div>
+          </div>
+          
+          <div className="topBottom">
+                      
+            <div id="postSubmissionInfo">
+              Submitted&nbsp; 
+              <span id="postTime">{timeAgo(post.created_utc * 1000)}</span>
+              &nbsp;by&nbsp;
+              <span id="postAuthor"><a href={`https://www.reddit.com/user/${post.author}`}>u/{post.author}</a></span>
+              &nbsp;to&nbsp;
+              <span id="postSubreddit"><a href={`https://www.reddit.com/r/${post.subreddit}`}>r/{post.subreddit}</a> </span>
+            </div>
+            <div id="postTime"></div>
+          </div>
+          
         </div>
         
-        <div className="headLeft">
+        <br />
+        
+        <div className="headBottom">
           <div id="postTitle"><a href={post.url} target="_blank" rel="noopener noreferrer">{post.title}</a></div>
+
         </div>
         
       </div>
