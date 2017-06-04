@@ -31,8 +31,7 @@ class CardHead extends Component {
         <br />
         
         <div className="headBottom">
-          <div id="postTitle"><a href={post.url} target="_blank" rel="noopener noreferrer">{post.title}</a></div>
-
+          <div id="postTitle"><a href={post.url} target="_blank" rel="noopener noreferrer"><h2>{post.title}</h2></a></div>
         </div>
         
       </div>
