@@ -58,6 +58,10 @@
   to { transform: rotate(360deg); }
 }
 
+.changeSub button {
+  margin-right: 20px;
+}
+
 .body {
   display: flex;
   flex-direction: column;

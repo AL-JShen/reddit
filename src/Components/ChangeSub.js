@@ -6,7 +6,8 @@ class ChangeSub extends Component {
     return (
       <div className="changeSub">
         <input id="inputSub" type="string" placeholder="SubReddit" onChange={this.props.handleSub} />
-        <button type="button"  onClick={this.props.handleChange}>Change a sub!</button>
+        <button type="button" onClick={this.props.handleChange}>Change a sub!</button>
+        <button id="sortTop" type="button" onClick={this.props.handleTop}>Top of all time</button>
       </div>
     );
   }

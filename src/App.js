@@ -17,6 +17,7 @@ class App extends Component {
     this.getPosts = this.getPosts.bind(this);
     this.handleSub = this.handleSub.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleTop = this.handleTop.bind(this);
   }
   
   getPosts() {
@@ -46,6 +47,15 @@ class App extends Component {
     setTimeout(() => { this.getPosts() }, 5);
   }
   
+  handleTop() {
+    const promise = axios.get(`https://www.reddit.com/r/${this.state.sub}/top/.json?sort=top&t=all&limit=100`);
+    promise.then((response) => {
+      this.setState({
+        posts: response.data.data.children
+      });
+    });
+  }
+  
   componentWillMount() {
     this.setState({
       sub: 'all',
@@ -57,7 +67,7 @@ class App extends Component {
     return (
       <div className="App">
         <Title />
-        <Header handleSub={this.handleSub} handleChange={this.handleChange} sub={this.state.sub}/>
+        <Header handleSub={this.handleSub} handleChange={this.handleChange} handleTop={this.handleTop} sub={this.state.sub}/>
         <RenderPosts posts={this.state.posts} />
       </div>
     );
