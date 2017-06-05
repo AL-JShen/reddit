@@ -21,7 +21,7 @@ class App extends Component {
   }
   
   getPosts() {
-    const promise = axios.get(`https://www.reddit.com/r/${this.state.sub}/.json?limit=100`);
+    const promise = axios.get(`https://www.reddit.com/r/${this.state.sub}/.json?limit=50`);
     promise.then((response) => {
       this.setState({
         posts: response.data.data.children
@@ -48,7 +48,7 @@ class App extends Component {
   }
   
   handleTop() {
-    const promise = axios.get(`https://www.reddit.com/r/${this.state.sub}/top/.json?sort=top&t=all&limit=100`);
+    const promise = axios.get(`https://www.reddit.com/r/${this.state.sub}/top/.json?sort=top&t=all&limit=50`);
     promise.then((response) => {
       this.setState({
         posts: response.data.data.children
