@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import CardHead from './CardHead';
 import CardBody from './CardBody';
-import CardFoot from './CardFoot';
 
 class Card extends Component {
 

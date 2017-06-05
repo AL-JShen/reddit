@@ -20,7 +20,7 @@ class App extends Component {
   }
   
   getPosts() {
-    const promise = axios.get(`https://www.reddit.com/r/${this.state.sub}/.json`);
+    const promise = axios.get(`https://www.reddit.com/r/${this.state.sub}/.json?limit=100`);
     promise.then((response) => {
       this.setState({
         posts: response.data.data.children
